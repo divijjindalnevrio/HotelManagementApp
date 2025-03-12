@@ -232,7 +232,7 @@ public class ManifestProcessor : IPreprocessBuild
     {
         string prefix = "[GoogleMobileAds] ";
     #if UNITY_2017_1_OR_NEWER
-        throw new BuildPlayerWindow.BuildMethodException(prefix + message);
+       // throw new BuildPlayerWindow.BuildMethodException(prefix + message);
     #else
         throw new OperationCanceledException(prefix + message);
     #endif
