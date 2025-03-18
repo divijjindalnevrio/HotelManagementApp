@@ -6,6 +6,8 @@ namespace Game.UI.Pool
 {
     public class ComponentPoolFactory : MonoBehaviour, IComponentPoolFactory
     {
+
+        public List<GameObject> _prefabList;
         [SerializeField]
         private GameObject _prefab;
         [SerializeField]
@@ -53,6 +55,11 @@ namespace Game.UI.Pool
             bool isNewInstance = false;
             if (_pool.Count == 0)
             {
+                if (_prefabList.Count > 0) {
+                    Debug.Log("PRFEB LIST COUNT : " + _prefabList.Count);
+                    _prefab = _prefabList[Random.Range(0,_prefabList.Count)];
+                }
+                
                 GameObject result = Instantiate(_prefab);
 
                 if (null == result)
