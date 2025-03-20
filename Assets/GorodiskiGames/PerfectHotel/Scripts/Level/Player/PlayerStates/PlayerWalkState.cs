@@ -43,7 +43,9 @@ namespace Game.Level.Player
         {
             base.Initialize();
 
-            _player.View.NavMeshAgent.enabled = true;
+            //if(_player.View.NavMeshAgent)
+
+            _player.View.NavMeshAgent.enabled = true;    // ture
 
             _walkSpeed = _player.Model.WalkSpeed;
             _rotateSpeed = _player.Model.RotateSpeed;

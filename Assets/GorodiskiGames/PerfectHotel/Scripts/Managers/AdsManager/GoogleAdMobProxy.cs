@@ -21,12 +21,12 @@ namespace Game.Managers
         private const string _rewardedIDAndroidTest = "ca-app-pub-3940256099942544/5224354917";
 
         //IOS
-        private const string _interstitialIDiOS = "ca-app-pub-3940256099942544/4411468910";
-        private const string _bannerIDiOS = "ca-app-pub-3940256099942544/2934735716";
+        private const string _interstitialIDiOS = "ca-app-pub-7624429407061141/3237209873";
+        private const string _bannerIDiOS = "ca-app-pub-7624429407061141/8089285144";
         private const string _rewardedIDiOS = "ca-app-pub-3940256099942544/1712485313";
         //ANDROID
-        private const string _interstitialIDAndroid = "ca-app-pub-3940256099942544/1033173712";
-        private const string _bannerIDAndroid = "ca-app-pub-3940256099942544/6300978111";
+        private const string _interstitialIDAndroid = "ca-app-pub-7624429407061141/3838509941";
+        private const string _bannerIDAndroid = "ca-app-pub-7624429407061141/6061887604";
         private const string _rewardedIDAndroid = "ca-app-pub-3940256099942544/5224354917";
 
         private readonly Dictionary<string, float> _rewardedReloadTimeMap;
