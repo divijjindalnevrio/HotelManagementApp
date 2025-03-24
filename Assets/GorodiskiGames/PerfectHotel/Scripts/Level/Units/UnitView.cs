@@ -51,6 +51,7 @@ namespace Game.Level.Unit
         private void PlayWalkAnimation()
         {
             PlayAnimation(AnimationType.Walk, GetRandomTime());
+            //Debug.Log("WALK ANIM IS RUNNING : ");
         }
 
         public void Idle(UnitSexType sex, int inventories)
@@ -71,7 +72,7 @@ namespace Game.Level.Unit
             var animation = AnimationType.Idle;
             if (sex == UnitSexType.Female)
                 animation = AnimationType.IdleFemale;
-
+    
             PlayAnimation(animation, GetRandomTime());
         }
 
