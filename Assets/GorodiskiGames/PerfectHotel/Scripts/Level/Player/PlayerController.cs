@@ -280,6 +280,16 @@ namespace Game.Level.Player
         {
             _stateManager.SwitchToState(instance);
             _view.CurrentState = instance.GetType();
+
+            if (instance.GetType() == typeof(PlayerWalkState))
+            {
+                _view.InvokingPlayerWalkingEvent(true);
+                Debug.Log("here is the type : " + instance.GetType());
+
+            }
+            else { _view.InvokingPlayerWalkingEvent(false);
+                Debug.Log("here is the type : not"); }
+
         }
 
         public override void WalkToItem(Vector3 position)

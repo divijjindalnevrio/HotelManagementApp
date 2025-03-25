@@ -48,6 +48,7 @@ namespace Game.Level.Cash
         public void FlyToPlayer()
         {
             _stateManager.SwitchToState(typeof(CashFlyToPlayerState));
+            Debug.Log("money is flying toward player : ");
         }
 
         public void FireRemoveCash()

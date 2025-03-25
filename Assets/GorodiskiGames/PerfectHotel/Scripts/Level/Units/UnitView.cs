@@ -46,6 +46,8 @@ namespace Game.Level.Unit
         {
             SetLayerWeight(inventories);
             PlayWalkAnimation();
+            Debug.Log("WALK ANIM IS RUNNING : 1");
+            
         }
 
         private void PlayWalkAnimation()

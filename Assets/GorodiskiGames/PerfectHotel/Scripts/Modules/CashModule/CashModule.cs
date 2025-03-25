@@ -107,7 +107,6 @@ namespace Game.Modules.CashModule
         {
             view.CASH_FLY_TO_PILE += CashFlyToPile;
             view.CASH_FLY_TO_PLAYER += CashFlyToPlayer;
-
             var pile = new CashPileController(view, model);
 
             _cashPilesMap[view] = pile;

@@ -27,7 +27,7 @@ namespace Game.Managers
         //ANDROID
         private const string _interstitialIDAndroid = "ca-app-pub-7624429407061141/3838509941";
         private const string _bannerIDAndroid = "ca-app-pub-7624429407061141/6061887604";
-        private const string _rewardedIDAndroid = "ca-app-pub-3940256099942544/5224354917";
+        private const string _rewardedIDAndroid = "ca-app-pub-7624429407061141/2609829381";
 
         private readonly Dictionary<string, float> _rewardedReloadTimeMap;
         private readonly Dictionary<string, float> _interstitialReloadTimeMap;
