@@ -113,6 +113,7 @@ namespace Game.Modules.CashModule
             _itemsMap[itemCashPile] = view;
 
             _gameManager.AddItem(itemCashPile);
+            
         }
 
         private CashController Cash(Vector3 position)

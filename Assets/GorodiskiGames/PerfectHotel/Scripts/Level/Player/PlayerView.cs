@@ -10,8 +10,6 @@ namespace Game.Level.Player
         [SerializeField] private SkinnedMeshRenderer _body;
         [SerializeField] private string _currentState;
 
-        public static Action<bool> OnPlayerWalkState;
-
         public Vector3 AimPosition => _aimTransform.position;
 
         public Type CurrentState
@@ -27,7 +25,8 @@ namespace Game.Level.Player
 
         public void InvokingPlayerWalkingEvent(bool iswalking)
         {
-            OnPlayerWalkState?.Invoke(iswalking);
+            EventUtility.OnPlayerWalkState?.Invoke(iswalking);
+            //OnPlayerWalkState?.Invoke(iswalking);
         }
     }
 }

@@ -12,16 +12,12 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerView.OnPlayerWalkState += PlayPlayerWalkSound;
+        EventUtility.OnPlayerWalkState += PlayPlayerWalkSound;
+        EventUtility.OnPlayerCollectCash += PlayCashCollectSound;
         walkAudioSource = GameObject.Find("CashCollect").GetComponent<AudioSource>();
     }
 
     void Start()
-    {
-        
-    }
-    
-    void Update()
     {
         
     }

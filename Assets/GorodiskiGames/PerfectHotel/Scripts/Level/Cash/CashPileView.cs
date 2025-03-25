@@ -70,6 +70,8 @@ namespace Game.Level.Cash
             }
             else if (deltaPacks < 0)
             {
+                Debug.Log("CASH_FLY_TO_PLAYER first time : HERE ");
+                EventUtility.OnPlayerCollectCash?.Invoke();
                 for (int i = 0; i < Mathf.Abs(deltaPacks); i++)
                 {
                     int index = packs - i - 1;
