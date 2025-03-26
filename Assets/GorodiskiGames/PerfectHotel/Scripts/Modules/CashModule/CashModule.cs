@@ -61,6 +61,7 @@ namespace Game.Modules.CashModule
         public override void Dispose()
         {
             _gameManager.FLY_TO_REMOVE_CASH -= CashFlyToRemove;
+            Debug.Log(" cash removed : DISABLESD ");
             _timer.TICK -= OnTick;
 
             foreach (var cashPile in _cashPilesMap.Values)
@@ -129,6 +130,7 @@ namespace Game.Modules.CashModule
             cash.FlyToPile(endPosition);
             view.Cashes.Add(cash);
             cash.REMOVE_CASH += OnRemoveCash;
+            
         }
 
         private void CashFlyToPlayer(CashPileView cashPileView, int index)
@@ -142,13 +144,22 @@ namespace Game.Modules.CashModule
         private void CashFlyToRemove(Vector3 endPosition)
         {
             _cashFlyToRemoveTimer += Time.deltaTime;
-            if (_cashFlyToRemoveTimer < _cashFlyToRemoveRate) return;
+            if (_cashFlyToRemoveTimer < _cashFlyToRemoveRate)
+            {
+               // EventUtility.OnCashRemove?.Invoke(true);
+                Debug.Log(" cash removed : STRAT ");
+                return;
+            }
 
             _cashFlyToRemoveTimer = 0f;
 
             CashController cash = Cash(_gameManager.Player.View.transform.position + (Vector3.up * _heightAbovePlayer));
             cash.FlyToRemove(endPosition);
             cash.REMOVE_CASH += OnRemoveCash;
+
+           // EventUtility.OnCashRemove?.Invoke(false);
+            Debug.Log(" cash removed : STOP ");
+                                                
         }
 
         private void OnRemoveCash(CashController cash)
