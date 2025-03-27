@@ -23,7 +23,7 @@ namespace Game.Managers
         //IOS
         private const string _interstitialIDiOS = "ca-app-pub-7624429407061141/3237209873";
         private const string _bannerIDiOS = "ca-app-pub-7624429407061141/8089285144";
-        private const string _rewardedIDiOS = "ca-app-pub-3940256099942544/1712485313";
+        private const string _rewardedIDiOS = "ca-app-pub-7624429407061141/1528298532";
         //ANDROID
         private const string _interstitialIDAndroid = "ca-app-pub-7624429407061141/3838509941";
         private const string _bannerIDAndroid = "ca-app-pub-7624429407061141/6061887604";
