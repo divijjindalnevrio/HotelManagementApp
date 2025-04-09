@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStep: {fileID: 8300000, guid: cef58886b957c43e7b35af46744020d5, type: 3}
   cashCollect: {fileID: 8300000, guid: 7c5bbf841011243fe87df19d6ad2bbcb, type: 3}
-  cashRemove: {fileID: 8300000, guid: e06080f8d85bf42e896ab1a32cf7878e, type: 3}
+  cashSpend: {fileID: 8300000, guid: d83092b59fc5a4b46960a56a94eefd3c, type: 3}
   audioSource: {fileID: 1690429530}
 --- !u!4 &63299391
 Transform:

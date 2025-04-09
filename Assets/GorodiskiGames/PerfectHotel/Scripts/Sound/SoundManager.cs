@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioClip footStep;
     [SerializeField] private AudioClip cashCollect;
-    [SerializeField] private AudioClip cashRemove;
+    [SerializeField] private AudioClip cashSpend;
     [SerializeField] private AudioSource audioSource;
     private AudioSource walkAudioSource;
     private AudioSource cashRemoveAudioSource;
@@ -16,10 +16,10 @@ public class SoundManager : MonoBehaviour
     {
         EventUtility.OnPlayerWalkState += PlayPlayerWalkSound;
         EventUtility.OnPlayerCollectCash += PlayCashCollectSound;
-        EventUtility.OnCashRemove += PlayCashRemoveSound;
+        EventUtility.OnCashSpend += PlayCashSpendSound;
 
         walkAudioSource = transform.GetChild(0).transform.Find("CashCollect").GetComponent<AudioSource>();
-        cashRemoveAudioSource = transform.GetChild(0).transform.Find("CashRemove").GetComponent<AudioSource>();
+        cashRemoveAudioSource = transform.GetChild(0).transform.Find("CashCounter").GetComponent<AudioSource>();
     }
 
     void Start()
@@ -58,13 +58,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void PlayCashRemoveSound(bool isPlaying)
+    private void PlayCashSpendSound(bool isPlaying)
     {
         if (isPlaying)
         {
             if (!cashRemoveAudioSource.isPlaying)
             {
-                cashRemoveAudioSource.clip = cashRemove;
+                cashRemoveAudioSource.clip = cashSpend;
                 cashRemoveAudioSource.Play();
                 Debug.Log("Cash removed sound play : PLAY");
             }

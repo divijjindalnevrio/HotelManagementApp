@@ -146,8 +146,6 @@ namespace Game.Modules.CashModule
             _cashFlyToRemoveTimer += Time.deltaTime;
             if (_cashFlyToRemoveTimer < _cashFlyToRemoveRate)
             {
-               // EventUtility.OnCashRemove?.Invoke(true);
-                Debug.Log(" cash removed : STRAT ");
                 return;
             }
 
@@ -156,9 +154,6 @@ namespace Game.Modules.CashModule
             CashController cash = Cash(_gameManager.Player.View.transform.position + (Vector3.up * _heightAbovePlayer));
             cash.FlyToRemove(endPosition);
             cash.REMOVE_CASH += OnRemoveCash;
-
-           // EventUtility.OnCashRemove?.Invoke(false);
-            Debug.Log(" cash removed : STOP ");
                                                 
         }
 
