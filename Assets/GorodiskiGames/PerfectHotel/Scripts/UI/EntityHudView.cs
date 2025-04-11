@@ -55,7 +55,9 @@ namespace Game.Level.Entity
         protected override void OnModelChanged(EntityModel model)
         {
             _info = model.Type.ToString().ToUpper();
-            _price = GameConstants.CashIcon + " " + MathUtil.NiceCash(model.PricePurchase);
+            // _price = GameConstants.CashIcon + " " + MathUtil.NiceCash(model.PricePurchase);
+
+            _price = MathUtil.NiceCash(model.PriceUpdate);
 
             if (model.Type == EntityType.Area || model.Type == EntityType.Elevator)
             {
@@ -75,7 +77,9 @@ namespace Game.Level.Entity
 
             if (model.IsPurchased)
             {
-                _price = GameConstants.CashIcon + " " + MathUtil.NiceCash(model.PriceUpdate);
+                //_price = GameConstants.CashIcon + " " + MathUtil.NiceCash(model.PriceUpdate);
+
+                _price = MathUtil.NiceCash(model.PriceUpdate);
 
                 int lvl = model.LvlNext + 1;
                 _info = "LVL " + lvl;
