@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/GorodiskiGames/PerfectHotel/Scenes/Gameplay.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/GorodiskiGames/PerfectHotel/Scenes/Hotel4.unity
-    guid: d0dff42907e1f4c2eb70418e1e6cb55b
-  - enabled: 1
     path: Assets/GorodiskiGames/PerfectHotel/Scenes/Hotel1.unity
     guid: 6bf7b226d544d4a9a86b7d40d801b39a
   - enabled: 1
     path: Assets/GorodiskiGames/PerfectHotel/Scenes/Hotel2.unity
     guid: 70745a608ce7346f1b7c727f137526b9
-  - enabled: 1
+  - enabled: 0
     path: Assets/GorodiskiGames/PerfectHotel/Scenes/Hotel3.unity
     guid: f1bd9a8d5fc834ae1820e2a4c6602d7d
+  - enabled: 0
+    path: Assets/GorodiskiGames/PerfectHotel/Scenes/Hotel4.unity
+    guid: d0dff42907e1f4c2eb70418e1e6cb55b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
